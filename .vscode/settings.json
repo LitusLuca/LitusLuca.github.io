@@ -9,5 +9,11 @@
         "**/*.sass",
         "**/*.ts",
         "src/**"
-    ]
+    ],
+    "files.associations": {
+        "*.gltf": "json",
+    },
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
 }

@@ -9,6 +9,7 @@ import (
 	"github.com/litusluca/litusluca.github.io/src/events"
 	"github.com/litusluca/litusluca.github.io/src/input"
 	"github.com/litusluca/litusluca.github.io/src/renderer"
+	"github.com/litusluca/litusluca.github.io/src/scene"
 	"github.com/litusluca/litusluca.github.io/src/scene/camera"
 	"github.com/litusluca/litusluca.github.io/src/scene/controller"
 )
@@ -26,6 +27,13 @@ type BaseLayer struct {
 
 func CreateBaseLayer() *BaseLayer {
 	layer := new(BaseLayer)
+
+	s := scene.NewSceneFromGLTF("untitled.gltf")
+	fmt.Println(s.GetChildren()[0].GetName())
+
+
+	//scene.NewNode[scene.Scene]()
+
 	layer.runtime = 0
 
 	layer.triangle = renderer.NewVAO()
